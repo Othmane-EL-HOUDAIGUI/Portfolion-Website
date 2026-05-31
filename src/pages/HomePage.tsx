@@ -11,7 +11,6 @@ import LogoLoop from '../components/LogoLoop';
 import CardNav from '../components/CardNav';
 import Chatbot from '../components/Chatbot';
 import RotatingText from '../components/RotatingText';
-import FaultyTerminal from '../components/FaultyTerminal';
 
 import cafLogo from '../assets/logos/caf.png';
 import ratpLogo from '../assets/logos/ratp.jpg';
@@ -201,7 +200,7 @@ export default function HomePage({ isDark, toggleTheme, lang, toggleLang }: { is
     <div className={`min-h-screen font-sans selection:bg-[#80276C]/30 overflow-hidden transition-colors duration-500
       ${isDark ? 'bg-zinc-950 text-zinc-50' : 'bg-zinc-50 text-zinc-900'}
     `}>
-      {/* Background Effects */}
+      {/* Background Aurora */}
       <div className="fixed inset-0 z-0 pointer-events-none" style={{ opacity: isDark ? 0.4 : 0.8 }}>
         <Aurora
           colorStops={
@@ -212,27 +211,6 @@ export default function HomePage({ isDark, toggleTheme, lang, toggleLang }: { is
           blend={0.5}
           amplitude={1.2}
           speed={0.8}
-        />
-      </div>
-      <div className="fixed inset-0 z-0 pointer-events-none" style={{ opacity: isDark ? 0.15 : 0.08 }}>
-        <FaultyTerminal
-          scale={1.5}
-          gridMul={[2, 1]}
-          digitSize={1.2}
-          timeScale={0.5}
-          pause={false}
-          scanlineIntensity={0.5}
-          glitchAmount={1}
-          flickerAmount={1}
-          noiseAmp={1}
-          chromaticAberration={0}
-          dither={0}
-          curvature={0.1}
-          tint={isDark ? "#EAB308" : "#80276C"}
-          mouseReact
-          mouseStrength={0.5}
-          pageLoadAnimation
-          brightness={isDark ? 0.6 : 0.8}
         />
       </div>
 
