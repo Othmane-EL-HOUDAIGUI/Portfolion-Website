@@ -332,7 +332,7 @@ export default function HomePage({ isDark, toggleTheme, lang, toggleLang }: { is
                 }} className={`px-6 py-3 font-medium rounded-lg transition-colors flex items-center gap-2 ${isDark ? 'bg-zinc-50 text-zinc-950 hover:bg-zinc-200' : 'bg-black text-white hover:bg-zinc-800'}`}>
                   {t('heroCtaProjects', lang)} <ArrowRight size={18} />
                 </a>
-                <a href={`${BASE}CV_Othmane_EL_HOUDAIGUI.pdf`} download className={`px-6 py-3 font-medium rounded-lg transition-colors border flex items-center gap-2 ${isDark ? 'bg-white/5 border-white/10 hover:bg-white/10' : 'bg-black/5 border-black/10 hover:bg-black/10 text-black'}`}>
+                <a href={`${BASE}CV_othmane_CDI.pdf`} download className={`px-6 py-3 font-medium rounded-lg transition-colors border flex items-center gap-2 ${isDark ? 'bg-white/5 border-white/10 hover:bg-white/10' : 'bg-black/5 border-black/10 hover:bg-black/10 text-black'}`}>
                   <Download size={18} /> {t('heroCtaCV', lang)}
                 </a>
               </motion.div>
