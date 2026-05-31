@@ -4,6 +4,11 @@ const translations = {
   // Hero
   heroStatus: { fr: "Systèmes en ligne & opérationnels", en: "Systems online & operational" },
   heroSubtitle: { fr: "Ingénieur généraliste. systèmes IoT, IA et maintenance ferroviaire.", en: "General engineer. IoT systems, AI and railway maintenance." },
+  heroSubtitlePrefix: { fr: "Ingénieur généraliste. ", en: "General engineer. " },
+  heroSubtitleRotating: {
+    fr: "systèmes IoT,IA,maintenance ferroviaire,mécatronique",
+    en: "IoT systems,AI,railway maintenance,mechatronics"
+  },
   heroCtaProjects: { fr: "Voir les réalisations", en: "View projects" },
   heroCtaCV: { fr: "Télécharger mon CV", en: "Download my CV" },
 

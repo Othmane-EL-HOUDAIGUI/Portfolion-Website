@@ -10,6 +10,7 @@ import SpotlightCard from '../components/SpotlightCard';
 import LogoLoop from '../components/LogoLoop';
 import CardNav from '../components/CardNav';
 import Chatbot from '../components/Chatbot';
+import RotatingText from '../components/RotatingText';
 
 import cafLogo from '../assets/logos/caf.png';
 import ratpLogo from '../assets/logos/ratp.jpg';
@@ -316,8 +317,27 @@ export default function HomePage({ isDark, toggleTheme, lang, toggleLang }: { is
 
               <AnimatedTitle text="Othmane EL HOUDAIGUI" />
 
-              <div className={`text-xl md:text-2xl font-medium mb-12 h-20 ${isDark ? 'text-zinc-400 font-light' : 'text-zinc-800 font-medium'}`}>
-                <TypewriterText text={t('heroSubtitle', lang)} delay={1.5} />
+              <div className={`text-xl md:text-2xl font-medium mb-12 h-20 flex flex-wrap items-center gap-x-2 gap-y-1.5 ${isDark ? 'text-zinc-400 font-light' : 'text-zinc-800 font-medium'}`}>
+                <span>{t('heroSubtitlePrefix', lang)}</span>
+                <RotatingText
+                  texts={t('heroSubtitleRotating', lang).split(',').map(s => s.trim())}
+                  mainClassName={`px-2.5 py-0.5 justify-center rounded-lg overflow-hidden font-bold inline-flex ${
+                    isDark 
+                      ? 'bg-[#80276C]/20 text-[#d4a5c8] border border-[#80276C]/30' 
+                      : 'bg-[#80276C]/10 text-[#80276C] border border-[#80276C]/20 shadow-sm'
+                  }`}
+                  staggerFrom="last"
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  exit={{ y: "-120%" }}
+                  staggerDuration={0.025}
+                  splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1"
+                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                  rotationInterval={2000}
+                  splitBy="characters"
+                  auto
+                  loop
+                />
               </div>
 
               <motion.div
